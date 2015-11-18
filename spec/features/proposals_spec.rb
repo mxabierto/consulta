@@ -26,6 +26,31 @@ feature 'Proposals' do
     end
   end
 
+  scenario 'Government Index' do
+    featured_proposals = create_featured_proposals
+
+    author = create(:user)
+    create(:organization, user: author)
+    5.times do
+      create(:proposal, author: author)
+    end
+
+    visit proposals_path(by_category: "government")
+
+    expect(page).to have_selector('#proposals .proposal', count: 5)
+  end
+
+  scenario 'Citizen Index' do
+    featured_proposals = create_featured_proposals
+    5.times do
+      create(:proposal)
+    end
+
+    visit proposals_path(by_category: "citizen")
+
+    expect(page).to have_selector('#proposals .proposal', count: 5)
+  end
+
   scenario 'Paginated Index' do
     per_page = Kaminari.config.default_per_page
     (per_page + 5).times { create(:proposal) }
