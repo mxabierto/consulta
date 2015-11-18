@@ -17,6 +17,18 @@ describe Proposal do
     expect(proposal).to_not be_valid
   end
 
+  it "should have citizen category by default" do
+    expect(proposal.category).to eq("citizen")
+  end
+
+  it "should have the government category when the author belongs to an organization" do
+    author = create(:user)
+    create(:organization, user: author)
+    proposal = create(:proposal, author: author)
+
+    expect(proposal.category).to eq("government")
+  end
+
   describe "#title" do
     it "should not be valid without a title" do
       proposal.title = nil
