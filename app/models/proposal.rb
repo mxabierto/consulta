@@ -15,6 +15,7 @@ class Proposal < ActiveRecord::Base
   belongs_to :author, -> { with_hidden }, class_name: 'User', foreign_key: 'author_id'
   has_many :comments, as: :commentable
   has_many :annotations
+  attr_accessor :closing_date
 
   validates :title, presence: true
   validates :question, presence: true
