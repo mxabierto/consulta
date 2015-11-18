@@ -1,6 +1,7 @@
 class ProposalsController < ApplicationController
   include CommentableActions
   include FlagActions
+  has_scope :by_category
 
   before_action :parse_search_terms, only: :index
   before_action :parse_tag_filter, only: :index
