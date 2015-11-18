@@ -91,3 +91,5 @@ end
 group :test do
   gem 'email_spec'
 end
+
+gem 'polymer-rails'
