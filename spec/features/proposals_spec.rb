@@ -83,10 +83,39 @@ feature 'Proposals' do
     expect(page).to have_content I18n.l(proposal.created_at.to_date)
     expect(page).to have_selector(avatar(proposal.author.name))
     expect(page.html).to include "<title>#{proposal.title}</title>"
+    expect(page).not_to have_content(I18n.t("proposals.form.closing_date_label"))
 
     within('.social-share-button') do
       expect(page.all('a').count).to be(3) # Twitter, Facebook, Google+
     end
+  end
+
+  scenario 'Show closed proposal' do
+    user = create(:user)
+    login_as(user)
+
+    proposal = create(:proposal)
+    proposal.closing_date = Time.now - 1.day
+    proposal.save
+    visit proposal_path(proposal)
+
+    expect(page).to have_content(I18n.t("proposals.form.closing_date_label"))
+    expect(page).not_to have_selector('#new_comment')
+    expect(page).to have_content(I18n.t("proposals.show.closed_for_comments"))
+  end
+
+  scenario 'Show open proposal' do
+    user = create(:user)
+    login_as(user)
+
+    proposal = create(:proposal)
+    proposal.closing_date = Time.now + 1.day
+    proposal.save
+    visit proposal_path(proposal)
+
+    expect(page).to have_content(I18n.t("proposals.form.closing_date_label"))
+    expect(page).to have_selector('#new_comment')
+    expect(page).not_to have_content(I18n.t("proposals.show.closed_for_comments"))
   end
 
   scenario 'Social Media Cards' do

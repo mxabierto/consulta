@@ -219,6 +219,7 @@ es:
       edit_proposal_link: "Editar propuesta"
       share: "Compartir"
       flag: "Esta propuesta ha sido marcada como inapropiada por varios usuarios."
+      closed_for_comments: "Cerrado para comentarios"
     edit:
       editing: "Editar propuesta"
       show_link: "Ver propuesta"

@@ -11,7 +11,11 @@
         <%= render 'shared/wide_order_selector', i18n_namespace: "comments" %>
 
         <% if user_signed_in? %>
-          <%= render 'comments/form', {commentable: @proposal, parent_id: nil, toggeable: false} %>
+          <% if @proposal.closed? %>
+            <%= t("proposals.show.closed_for_comments") %>
+          <% else %>
+            <%= render 'comments/form', {commentable: @proposal, parent_id: nil, toggeable: false} %>
+          <% end %>
         <% else %>
         <br>
 
