@@ -62,7 +62,8 @@
     <section class="subnavigation row">
       <div class="small-12 medium-8 column">
       <%= link_to t("layouts.header.debates"), debates_path, class: ("active" if current_page?(controller: "/debates")) %>
-      <%= link_to t("layouts.header.proposals"), proposals_path, class: ("active" if current_page?(controller: "/proposals")) %>
+      <%= link_to t("layouts.header.citizen_proposals"), proposals_path(by_category: "citizen"), class: ("active" if current_page?(controller: "/proposals") && params[:by_category] == "citizen") %>
+      <%= link_to t("layouts.header.government_proposals"), proposals_path(by_category: "government"), class: ("active" if current_page?(controller: "/proposals") && params[:by_category] == "government") %>
       <%= link_to t("layouts.header.more_information"), "/more_information", class: ("active" if current_page?("/more_information"))  %>
       <%= link_to t("layouts.header.external_link_blog_url"), target: "_blank" do %>
         <%= t("layouts.header.external_link_blog") %>

@@ -30,7 +30,8 @@ en:
       # highlights: "Highlights"
       more_information: "More information"
       debates: "Debates"
-      proposals: "Citizen proposals"
+      citizen_proposals: "Citizen proposals"
+      government_proposals: "Government proposals"
     footer:
       description: "This portal uses the %{consul} which is %{open_source}. From Madrid out into the world."
       open_source: "open-source software"

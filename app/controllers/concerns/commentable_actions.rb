@@ -3,7 +3,7 @@ module CommentableActions
   include Polymorphic
 
   def index
-    @resources = @search_terms.present? ? resource_model.search(@search_terms) : resource_model.all
+    @resources = @search_terms.present? ? resource_model.search(@search_terms) : apply_scopes(resource_model).all
     @resources = @resources.tagged_with(@tag_filter) if @tag_filter
     @resources = @resources.page(params[:page]).for_render.send("sort_by_#{@current_order}")
     index_customization if index_customization.present?

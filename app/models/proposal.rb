@@ -5,6 +5,7 @@ class Proposal < ActiveRecord::Base
   include Measurable
   include Sanitizable
   include PgSearch
+  include Categorizable
 
   apply_simple_captcha
   acts_as_votable
