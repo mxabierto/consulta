@@ -387,3 +387,8 @@ es:
     google_oauth2:
       sign_in: "Entra con Google"
       sign_up: "Regístrate con Google"
+  activerecord:
+    attributes:
+      proposal:
+        closing_date: "Fecha de cierre"
+
