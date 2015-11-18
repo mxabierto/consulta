@@ -1,0 +1,24 @@
+{
+  "name": "gobmx-footer",
+  "version": "0.0.2",
+  "license": "MIT",
+  "main": "gobmx-footer.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1"
+  },
+  "keywords": [
+    "gob.mx",
+    "gobmx-footer"
+  ],
+  "homepage": "https://github.com/mxabierto/gobmx-footer",
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "4817d539785b5e5f305740660c4bc6038c1174e3"
+  },
+  "_source": "git://github.com/mxabierto/gobmx-footer.git",
+  "_target": "^0.0.2",
+  "_originalSource": "mxabierto/gobmx-footer",
+  "_direct": true
+}
