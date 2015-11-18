@@ -205,6 +205,7 @@ es:
       tags_label: "Temas"
       tags_instructions: "Etiqueta esta propuesta. Puedes elegir entre nuestras propuestas o introducir las que desees."
       tags_placeholder: "Escribe las etiquetas que desees separadas por una coma (',')"
+      closing_date_label: "Fecha de cierre"
     show:
       back_link: "Volver"
       author_deleted: "Usuario eliminado"
