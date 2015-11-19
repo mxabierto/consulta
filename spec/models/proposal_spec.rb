@@ -29,6 +29,11 @@ describe Proposal do
     expect(proposal.category).to eq("government")
   end
 
+  it "should not be closed if date has not been specified" do
+    proposal = create(:proposal)
+    expect(proposal.closed?).to eq(false)
+  end
+
   describe "#title" do
     it "should not be valid without a title" do
       proposal.title = nil
