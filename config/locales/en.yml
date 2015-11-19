@@ -208,6 +208,10 @@ en:
       closing_date_label: "Closing date"
     show:
       back_link: "Go back"
+      how_to_participate: "How to participate"
+      step_1: "Read the proposal document."
+      step_2: "Register to give your opinion."
+      step_3: "Annotate, Comment, Support or Oppose!"
       author_deleted: "User deleted"
       code: "Proposal code:"
       comments_title: "Comments"

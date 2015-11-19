@@ -8,7 +8,7 @@
 <% cache [locale_and_user_status(@proposal), @proposal, @proposal.author, Flag.flagged?(current_user, @proposal), @proposal_votes] do %>
   <section class="proposal-show annotate" data-id=<%= @proposal.id %> data-user-id=<%= current_user.id %>>
     <div id="<%= dom_id(@proposal) %>" class="row">
-      <div class="small-12 medium-9 column">
+      <div class="small-12 medium-8 column">
         <i class="icon-angle-left left"></i>&nbsp;
         <%= link_to t("proposals.show.back_link"), :back, class: 'left back' %>
 
@@ -73,18 +73,17 @@
         </div>
       </div>
 
-      <aside class="small-12 medium-3 column">
-        <div class="sidebar-divider"></div>
-        <h3><%= t("votes.supports") %></h3>
-        <div class="text-center">
-          <div id="<%= dom_id(@proposal) %>_votes">
-           <%= render 'votes',
-                      { proposal: @proposal, vote_url: vote_proposal_path(@proposal, value: 'yes') } %>
-          </div>
+      <aside class="small-12 medium-4 column">
+        <div class="sidebar-container">
+          <h3><%= t("proposals.show.how_to_participate") %></h3>
+          <hr class="red"></hr>
+          <ul class="numbered">
+            <li><%= t("proposals.show.step_1") %></li>
+            <li><%= t("proposals.show.step_2") %></li>
+            <li><%= t("proposals.show.step_3") %></li>
+          </ul>
+          <%= image_tag("como-comentar.gif") %>
         </div>
-        <div class="sidebar-divider"></div>
-        <h3><%= t("proposals.show.share") %></h3>
-        <%= social_share_button_tag(@proposal.title) %>
       </aside>
     </div>
   </section>

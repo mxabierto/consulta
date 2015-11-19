@@ -208,6 +208,10 @@ es:
       closing_date_label: "Fecha de cierre"
     show:
       back_link: "Volver"
+      how_to_participate: "Cómo participar"
+      step_1: "Lee el documento de la propuesta."
+      step_2: "Regístrate para dar tu opinión."
+      step_3: "¡Anota, Comenta, Apoya u Oponte!"
       author_deleted: "Usuario eliminado"
       code: "Código de la propuesta:"
       comments_title: "Comentarios"

@@ -1,3 +1,23 @@
+p {
+    margin-bottom: 12.5px;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.42857;
+    color: #545454;
+}
+
+ul.numbered {
+    padding-left: 20px;
+    list-style: inside none decimal;
+    li {
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.42857;
+        color: #545454;
+    }
+}
+
 body.auth-page {
     padding-top: 0;
     background-color: #fff;
@@ -21,6 +41,41 @@ body.auth-page {
             font-size: 18px;
             font-weight: bold;
             line-height: 1.42857;
+        }
+    }
+}
+
+.proposal-show {
+    margin-top: 30px;
+    h1 {
+        font-size: 54px;
+        font-weight: 600;
+        line-height: 1.1;
+        color: #545454;
+    }
+    .sidebar-container {
+        h3 {
+            display: block;
+            border: none;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.1;
+            text-transform: none;
+            color: #545454;
+        }
+        hr.red {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            border-top: 1px solid #dce0e0;
+            position: relative;
+        }
+        hr.red::before {
+            content: " ";
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: #d0021b;
+            position: absolute;
         }
     }
 }
