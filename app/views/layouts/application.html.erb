@@ -8,6 +8,9 @@
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= html_import_tag "polymer" %>
+    <%= html_import_tag "gobmx-navbar" %>
+    <%= html_import_tag "gobmx-footer" %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag "favicon.ico" %>
     <%= favicon_link_tag "apple-touch-icon-200.png",
@@ -65,9 +68,7 @@
       <%= yield %>
       <div class="push"></div>
     </div>
-    <div class="footer">
-      <%= render 'layouts/footer' %>
-    </div>
+    <gobmx-footer></gobmx-footer>
   </body>
   <!--[if lt IE 9]>
     <%= javascript_include_tag "rem" %>

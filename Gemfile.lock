@@ -237,6 +237,8 @@ GEM
     newrelic_rpm (3.14.0.305)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    nokogumbo (1.4.6)
+      nokogiri
     nori (2.6.0)
     oauth (0.4.7)
     oauth2 (1.0.0)
@@ -280,6 +282,10 @@ GEM
       cliver (~> 0.3.1)
       multi_json (~> 1.0)
       websocket-driver (>= 0.2.0)
+    polymer-rails (1.1.0)
+      nokogiri (~> 1.6)
+      nokogumbo (~> 1.1)
+      rails (>= 3.1.0)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
@@ -470,6 +476,7 @@ DEPENDENCIES
   pg
   pg_search
   poltergeist
+  polymer-rails
   quiet_assets
   rails (= 4.2.4)
   responders

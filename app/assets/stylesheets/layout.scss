@@ -136,6 +136,47 @@ h6 {
   font-size: rem-calc(14);
 }
 
+.main-banner {
+  height: auto;
+  min-height: initial;
+  background-image: url("http://www.gob.mx/assets/home_picture.jpg");
+  background-size: cover;
+  background-position: right center;
+  color: #fff;
+  .container-fluid {
+    padding: 100px 0;
+  }
+  h1 {
+    margin-top: 25px;
+    margin-bottom: 12.5px;
+    font-size: 54px;
+    font-weight: bold;
+    color: #fff;
+    .red {
+      color: #d60003;
+    }
+    .red:hover {
+      color: #fafafa;
+    }
+  }
+  .text-sub {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.42857;
+    margin-bottom: 12.5px;
+  }
+  .text-sub-2 {
+    margin-bottom: 12.5px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.42857;
+  }
+}
+
+.tob-bar {
+  margin-bottom: 40px;
+}
+
 .button {
   background: $brand;
   font-size: rem-calc(14);

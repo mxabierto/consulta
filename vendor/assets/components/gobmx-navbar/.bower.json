@@ -1,0 +1,24 @@
+{
+  "name": "gobmx-navbar",
+  "version": "0.0.2",
+  "license": "MIT",
+  "main": "gobmx-navbar.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1"
+  },
+  "keywords": [
+    "gob.mx",
+    "gobmx-navbar"
+  ],
+  "homepage": "https://github.com/mxabierto/gobmx-navbar",
+  "_release": "0.0.2",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.0.2",
+    "commit": "2945256d5bb1bc60d3d86de17dd991375f3f5ca6"
+  },
+  "_source": "git://github.com/mxabierto/gobmx-navbar.git",
+  "_target": "^0.0.2",
+  "_originalSource": "mxabierto/gobmx-navbar",
+  "_direct": true
+}
