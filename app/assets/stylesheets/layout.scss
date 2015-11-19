@@ -139,7 +139,6 @@ h6 {
 .main-banner {
   height: auto;
   min-height: initial;
-  margin-bottom: 40px;
   background-image: url("http://www.gob.mx/assets/home_picture.jpg");
   background-size: cover;
   background-position: right center;
@@ -172,6 +171,10 @@ h6 {
     font-weight: 300;
     line-height: 1.42857;
   }
+}
+
+.tob-bar {
+  margin-bottom: 40px;
 }
 
 .button {
