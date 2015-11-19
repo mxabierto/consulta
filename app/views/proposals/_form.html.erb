@@ -50,6 +50,10 @@
       <%= f.text_field :tag_list, value: @proposal.tag_list.to_s, label: false, placeholder: t("proposals.form.tags_placeholder"), class: 'js-tag-list' %>
     </div>
 
+    <div class="small-12 column">
+      <%= f.date_select :closing_date %>
+    </div>
+
     <% if current_user.unverified? %>
       <div class="small-12 column">
         <%= f.label :responsible_name, t("proposals.form.proposal_responsible_name") %>

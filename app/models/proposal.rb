@@ -79,6 +79,10 @@ class Proposal < ActiveRecord::Base
     user && user.level_two_or_three_verified?
   end
 
+  def closed?
+    closing_date < Time.now
+  end
+
   def register_vote(user, vote_value)
     if votable_by?(user)
       vote_by(voter: user, vote: vote_value)

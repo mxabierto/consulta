@@ -205,6 +205,7 @@ en:
       tags_label: "Tags"
       tags_instructions: "Tag this proposal. You can choose from our tags or add your own."
       tags_placeholder: "Enter the tags you would like to use, separated by commas (',')"
+      closing_date_label: "Closing date"
     show:
       back_link: "Go back"
       author_deleted: "User deleted"
@@ -218,6 +219,7 @@ en:
       edit_proposal_link: "Edit"
       share: "Share"
       flag: "This proposal has been flagged as inappropriate by several users."
+      closed_for_comments: "Closed for comments"
     edit:
       editing: "Edit proposal"
       show_link: "View proposal"

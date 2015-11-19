@@ -205,6 +205,7 @@ es:
       tags_label: "Temas"
       tags_instructions: "Etiqueta esta propuesta. Puedes elegir entre nuestras propuestas o introducir las que desees."
       tags_placeholder: "Escribe las etiquetas que desees separadas por una coma (',')"
+      closing_date_label: "Fecha de cierre"
     show:
       back_link: "Volver"
       author_deleted: "Usuario eliminado"
@@ -218,6 +219,7 @@ es:
       edit_proposal_link: "Editar propuesta"
       share: "Compartir"
       flag: "Esta propuesta ha sido marcada como inapropiada por varios usuarios."
+      closed_for_comments: "Cerrado para comentarios"
     edit:
       editing: "Editar propuesta"
       show_link: "Ver propuesta"
@@ -386,3 +388,8 @@ es:
     google_oauth2:
       sign_in: "Entra con Google"
       sign_up: "Regístrate con Google"
+  activerecord:
+    attributes:
+      proposal:
+        closing_date: "Fecha de cierre"
+

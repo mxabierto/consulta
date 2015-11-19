@@ -38,6 +38,11 @@
           <span class="js-flag-actions">
             <%= render 'proposals/flag_actions', proposal: @proposal %>
           </span>
+            <% if @proposal.closing_date.present? %>
+              <br>
+              <%= t("proposals.form.closing_date_label") %>
+              <%= @proposal.closing_date %>
+            <% end %>
           <br>
             <%= t("proposals.show.code") %>
             <%= @proposal.code %>

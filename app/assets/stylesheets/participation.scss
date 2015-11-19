@@ -346,6 +346,10 @@
   }
 }
 
+label[for=proposal_closing_date] ~ select {
+  width: 150px;
+}
+
 // 02. Show participation
 // - - - - - - - - - - - - - - - - - - - - - - - - -
 
