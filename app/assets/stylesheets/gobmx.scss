@@ -1,3 +1,15 @@
+ul.numbered {
+    padding-left: 20px;
+    list-style: inside none decimal;
+    li {
+        margin-bottom: 0;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.42857;
+        color: #545454;
+    }
+}
+
 body.auth-page {
     padding-top: 0;
     background-color: #fff;
@@ -22,5 +34,75 @@ body.auth-page {
             font-weight: bold;
             line-height: 1.42857;
         }
+    }
+}
+
+.proposal-show {
+    margin-top: 30px;
+    h1 {
+        font-size: 54px;
+        font-weight: 600;
+        line-height: 1.1;
+        color: #545454;
+    }
+    p {
+        margin-bottom: 12.5px;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.42857;
+        color: #545454;
+    }
+    .sidebar-container {
+        h3 {
+            display: block;
+            border: none;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.1;
+            text-transform: none;
+            color: #545454;
+        }
+        hr.red {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            border-top: 1px solid #dce0e0;
+            position: relative;
+        }
+        hr.red::before {
+            content: " ";
+            display: block;
+            width: 35px;
+            height: 5px;
+            background-color: #d0021b;
+            position: absolute;
+        }
+    }
+    .vote {
+        display: inline-block;
+        padding: 10px 25px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.42857;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .vote.in-favor {
+        background-color: #4a90e2;
+        box-shadow: 0px 2px 0px 0px #1b5dab;
+        color: #fff;
+    }
+    .vote.in-favor:hover {
+        background-color: #2275d7;
+    }
+    .vote.against {
+        background-color: #fff;
+        border: 1px solid #777;
+        border-bottom: none;
+        box-shadow: 0px 2px 0px 0px #444;
+        color: #000;
+    }
+    .vote.against:hover {
+        background-color: #E6E6E6;
+        color: #333;
     }
 }

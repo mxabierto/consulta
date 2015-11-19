@@ -13,27 +13,23 @@
   <% end %>
 
     <div id="<%= dom_id(@proposal) %>" class="row">
-      <div class="small-12 medium-9 column">
+      <div class="small-12 medium-8 column">
         <i class="icon-angle-left left"></i>&nbsp;
         <%= link_to t("proposals.show.back_link"), :back, class: 'left back' %>
-
         <% if current_user && @proposal.editable_by?(current_user) %>
           <%= link_to edit_proposal_path(@proposal), class: 'edit-proposal button success tiny radius right' do %>
             <i class="icon-edit"></i>
             <%= t("proposals.show.edit_proposal_link") %>
           <% end %>
         <% end %>
-
         <h1><%= @proposal.title %></h1>
         <% if @proposal.conflictive? %>
           <div class="alert-box alert radius margin-top">
             <strong><%= t("proposals.show.flag") %></strong>
           </div>
         <% end %>
-
         <div class="proposal-info">
           <%= render '/shared/author_info', resource: @proposal %>
-
           <span class="bullet">&nbsp;&bull;&nbsp;</span>
           <%= l @proposal.created_at.to_date %>
           <span class="bullet">&nbsp;&bull;&nbsp;</span>
@@ -52,44 +48,58 @@
             <%= t("proposals.show.code") %>
             <%= @proposal.code %>
         </div>
-
         <blockquote><%= @proposal.summary %></blockquote>
-
         <%= safe_html_with_links @proposal.description %>
-
         <% if @proposal.external_url.present? %>
           <div class="document-link">
             <%= text_with_links @proposal.external_url %>
           </div>
         <% end %>
-
         <% if @proposal.video_url.present? %>
           <div class="video-link">
             <%= text_with_links @proposal.video_url %>
           </div>
         <% end %>
-
         <h4><%= @proposal.question %></h4>
-
         <%= render 'shared/tags', taggable: @proposal %>
-
         <div class="js-moderator-proposal-actions moderator-actions">
           <%= render 'proposals/actions', proposal: @proposal %>
         </div>
-      </div>
-
-      <aside class="small-12 medium-3 column">
-        <div class="sidebar-divider"></div>
-        <h3><%= t("votes.supports") %></h3>
-        <div class="text-center">
-          <div id="<%= dom_id(@proposal) %>_votes">
-           <%= render 'votes',
-                      { proposal: @proposal, vote_url: vote_proposal_path(@proposal, value: 'yes') } %>
+        <p><%= t("proposals.show.vote_label") %></p>
+        <% if voted_for?(@proposal_votes, @proposal) %>
+          <div class="supported">
+            <%= t("proposals.proposal.already_supported") %>
           </div>
+        <% else %>
+          <%= link_to vote_proposal_path(@proposal, value: 'yes'),
+              class: "vote in-favor",
+              title: t('proposals.proposal.support_title'), method: "post", remote: true do %>
+            <%= t("proposals.proposal.support") %>
+          <% end %>
+        <% end %>
+        <% if voted_for?(@proposal_votes, @proposal) %>
+          <div class="supported">
+            <%= t("proposals.proposal.already_supported") %>
+          </div>
+        <% else %>
+          <%= link_to vote_proposal_path(@proposal, value: 'no'),
+              class: "vote against",
+              title: t('proposals.proposal.oppose_title'), method: "post", remote: true do %>
+            <%= t("proposals.proposal.oppose") %>
+          <% end %>
+        <% end %>
+      </div>
+      <aside class="small-12 medium-4 column">
+        <div class="sidebar-container">
+          <h3><%= t("proposals.show.how_to_participate") %></h3>
+          <hr class="red"></hr>
+          <ul class="numbered">
+            <li><%= t("proposals.show.step_1") %></li>
+            <li><%= t("proposals.show.step_2") %></li>
+            <li><%= t("proposals.show.step_3") %></li>
+          </ul>
+          <%= image_tag("como-comentar.gif") %>
         </div>
-        <div class="sidebar-divider"></div>
-        <h3><%= t("proposals.show.share") %></h3>
-        <%= social_share_button_tag(@proposal.title) %>
       </aside>
     </div>
   </section>
