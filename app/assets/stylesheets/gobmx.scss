@@ -1,0 +1,26 @@
+body.auth-page {
+    padding-top: 0;
+    background-color: #fff;
+    background-image: none;
+    .wrapper {
+        margin-top: 70px;
+    }
+    .panel {
+        margin-bottom: 70px;
+        padding: 30px;
+        border: 1px solid #f0f0f0;
+        border-radius: 4px;
+        h2 {
+            margin-bottom: 20px;
+            font-size: 54px;
+            font-weight: 600;
+            color: #545454;
+        }
+        label {
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 1.42857;
+        }
+    }
+}
