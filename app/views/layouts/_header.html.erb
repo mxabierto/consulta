@@ -16,6 +16,18 @@
             <li class="toggle-topbar menu-icon"><a href="#"><span><%= t("application.menu")%></span></a></li>
         </ul>
         <section class="top-bar-section">
+            <ul>
+                <li><%= link_to t("layouts.header.debates"), debates_path, class: ("active" if current_page?(controller: "/debates")) %></li>
+                <li><%= link_to t("layouts.header.citizen_proposals"), proposals_path(by_category: "citizen"), class: ("active" if current_page?(controller: "/proposals") && params[:by_category] == "citizen") %></li>
+                <li><%= link_to t("layouts.header.government_proposals"), proposals_path(by_category: "government"), class: ("active" if current_page?(controller: "/proposals") && params[:by_category] == "government") %></li>
+                <li><%= link_to t("layouts.header.more_information"), "/more_information", class: ("active" if current_page?("/more_information"))  %></li>
+                <li>
+                    <%= link_to t("layouts.header.external_link_blog_url"), target: "_blank" do %>
+                    <%= t("layouts.header.external_link_blog") %>
+                        <i class="icon-external"></i>
+                    <% end %>
+                </li>
+            </ul>
             <%= render "devise/menu/login_items" %>
             <%= render "shared/admin_login_items" %>
         </section>
