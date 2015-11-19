@@ -77,4 +77,32 @@ body.auth-page {
             position: absolute;
         }
     }
+    .vote {
+        display: inline-block;
+        padding: 10px 25px;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.42857;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .vote.in-favor {
+        background-color: #4a90e2;
+        box-shadow: 0px 2px 0px 0px #1b5dab;
+        color: #fff;
+    }
+    .vote.in-favor:hover {
+        background-color: #2275d7;
+    }
+    .vote.against {
+        background-color: #fff;
+        border: 1px solid #777;
+        border-bottom: none;
+        box-shadow: 0px 2px 0px 0px #444;
+        color: #000;
+    }
+    .vote.against:hover {
+        background-color: #E6E6E6;
+        color: #333;
+    }
 }

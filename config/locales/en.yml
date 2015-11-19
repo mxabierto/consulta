@@ -176,8 +176,10 @@ en:
         other: " containing the term '%{search_term}'"
     proposal:
       proposal: "Proposal"
-      support: "Support"
+      support: "I'm in favor of the document"
+      oppose: "I'm against the document"
       support_title: "Support this proposal"
+      oppose_title: "Oppose this proposal"
       comments:
         zero: "No comments"
         one: "1 comment"
@@ -212,6 +214,7 @@ en:
       step_1: "Read the proposal document."
       step_2: "Register to give your opinion."
       step_3: "Annotate, Comment, Support or Oppose!"
+      vote_label: "What do you think of this document?"
       author_deleted: "User deleted"
       code: "Proposal code:"
       comments_title: "Comments"

@@ -176,8 +176,10 @@ es:
         other: " que contienen '%{search_term}'"
     proposal:
       proposal: "Propuesta"
-      support: "Apoyar"
+      support: "Estoy a favor del documento"
+      oppose: "Estoy en contra del documento"
       support_title: "Apoyar esta propuesta"
+      oppose_title: "Oponerse a esta propuesta"
       comments:
         zero: "Sin comentarios"
         one: "1 Comentario"
@@ -212,6 +214,7 @@ es:
       step_1: "Lee el documento de la propuesta."
       step_2: "Regístrate para dar tu opinión."
       step_3: "¡Anota, Comenta, Apoya u Oponte!"
+      vote_label: "¿Qué opinas de este documento?"
       author_deleted: "Usuario eliminado"
       code: "Código de la propuesta:"
       comments_title: "Comentarios"
