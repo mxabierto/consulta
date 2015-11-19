@@ -80,7 +80,7 @@ class Proposal < ActiveRecord::Base
   end
 
   def closed?
-    closing_date < Time.now
+    !!closing_date && (closing_date < Time.now)
   end
 
   def register_vote(user, vote_value)
